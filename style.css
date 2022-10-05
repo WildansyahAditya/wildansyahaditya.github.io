@@ -62,11 +62,6 @@ span{
     padding-top: 30px;
 }
 
-.vl{
-    border-right: 2px solid gray;
-}
-
-
 .title-main p{
     font-size: 18px;
     margin-left: auto;
@@ -204,4 +199,75 @@ section .card .box .contentBx div p
 .component-display{
     display: flex;
     margin-left: 450px;
+}
+
+
+/* Media Query */
+@media screen and (min-width: 375px) {
+    .ms-style {
+      background-color: #6E07F3;
+      height: 450px;
+    }
+    .ms-style .title-main p{
+        font-size: 12px;
+    }
+    .ms-style .title-main h3{
+        font-size: 20px;
+    }
+    .ls{
+        border-bottom: 2px solid gray;
+    }
+    section{
+        display: block;
+    }
+    .component-display{
+        margin-left: 50px;
+    }
+    .nav-link:hover::after{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width:768px){
+    section{
+        display: block;
+        margin-left: 200px;
+    }
+    .component-display{
+        margin-left: 230px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .lp-style{
+        background-color: #6E07F3;
+    }
+    .ll{
+        border-right: 2px solid gray;
+        border-bottom: none;
+    }
+    .ms-style .title-main p{
+        font-size: 20px;
+    }
+    section{
+        display: flex;
+        margin-left: -10px;
+    }
+    .component-display{
+        margin-left: 340px;
+    }
+    .nav-link:hover::after{
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width:1025px){
+    .component-display{
+        margin-left: 450px;
+    }
+    .nav-link:hover::after{
+        width: 50%;
+    }
 }
