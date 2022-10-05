@@ -1,30 +1,17 @@
-*{
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 li{
     list-style: none;
 }
 
-.list-content{
-    margin-left: -7px;
-}
-
-span{
-    color: #6E07F3;
-    font-weight: bold;
-}
-
 /* Navbar */
-.tittle{
-    font-weight: 800px;
-}
-
-.sub-title{
-    font-weight: 800px;
-}
-
 .nav-link:hover::after{
     content: '';
     display: block;
@@ -35,7 +22,7 @@ span{
     margin-bottom: -8px;
 }
 
-/* Hero Section */
+/* Hero */
 .hero{
     margin-top: 170px;
 }
@@ -50,15 +37,13 @@ span{
     height: 400px;
     color: white;
     padding-top: 120px;
+    margin-bottom: -50px;
 }
-
-
-/* sub main 1 */
+/* Main content 1 */
 .sub-main{
     background-color: white;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
     border-radius: 7px;
-    margin-top: -80px;
     padding-top: 30px;
 }
 
@@ -68,26 +53,20 @@ span{
     margin-right: auto;
 }
 
-/* sub main 2 */
-.main-content-2
+
+/* Main Content 2 */
+.title-main-2{
+    margin-top: 100px;
+}
+
+.main-content
 {
-    box-sizing: border-box;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin-bottom: 100px;
 }
-
-.title-main-2{
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-.title-main-2 p{
-    color: grey;
-}
-
 section
 {
     display: flex;
@@ -144,12 +123,11 @@ section .card .box .contentBx
     left: 0;
     width: 100%;
     height: 100%;
-    background:white;
+    background: #333;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid #6E07F3;
     transform-style: preserve-3d;
     transform: rotateY(180deg);
 }
@@ -157,7 +135,7 @@ section .card .box .contentBx div
 {
     transform-style: preserve-3d;
     padding: 20px;
-    background: linear-gradient(45deg,#6E07F3,#ffeb3b);
+    background: linear-gradient(45deg, #fe0061,#ffeb3b);
     transform: translateZ(100px);
 }
 section .card .box .contentBx div h2
@@ -173,7 +151,9 @@ section .card .box .contentBx div p
 
 }
 
+/* Footer */
 .footer{
+    margin-top: 100px;
     background-color: #6E07F3;
     height: 600px;
     color: white;
@@ -190,6 +170,7 @@ section .card .box .contentBx div p
 
 .copyright{
     padding-top: 100px;
+    text-align: center;
 }
 
 .contact{
@@ -203,71 +184,37 @@ section .card .box .contentBx div p
 
 
 /* Media Query */
-@media screen and (min-width: 375px) {
-    .ms-style {
-      background-color: #6E07F3;
-      height: 450px;
+
+/* Phone */
+@media screen and (min-width:375px){
+    .nav-link:hover::after{
+        width: 100%;
     }
-    .ms-style .title-main p{
-        font-size: 12px;
-    }
-    .ms-style .title-main h3{
-        font-size: 20px;
+    .main{
+        height: 650px;
     }
     .ls{
         border-bottom: 2px solid gray;
     }
-    section{
-        display: block;
-    }
-    .component-display{
-        margin-left: 50px;
-    }
-    .nav-link:hover::after{
-        width: 100%;
-    }
-    
 }
 
+/* Tablet */
 @media screen and (min-width:768px){
-    section{
-        display: block;
-        margin-left: 200px;
-    }
-    .component-display{
-        margin-left: 230px;
+    .main{
+        height: 500px;
     }
 }
 
+/* Laptop */
 @media screen and (min-width:1024px){
-    .lp-style{
-        background-color: #6E07F3;
-    }
-    .ll{
-        border-right: 2px solid gray;
-        border-bottom: none;
-    }
-    .ms-style .title-main p{
-        font-size: 20px;
-    }
-    section{
-        display: flex;
-        margin-left: -10px;
-    }
-    .component-display{
-        margin-left: 340px;
-    }
-    .nav-link:hover::after{
-        width: 100%;
-    }
-}
-
-
-@media screen and (min-width:1025px){
-    .component-display{
-        margin-left: 450px;
-    }
     .nav-link:hover::after{
         width: 50%;
+    }
+    .main{
+        height: 400px;
+    }
+    .lk{
+        border-bottom: none;
+        border-right:2px solid gray;
     }
 }
